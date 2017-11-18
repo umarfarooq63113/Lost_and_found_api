@@ -15,6 +15,10 @@ class CreateLostsTable extends Migration
     {
         Schema::create('losts', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('category');
+            $table->string('name');
+            $table->text('details');
+            $table->integer('contact');
             $table->timestamps();
         });
     }
